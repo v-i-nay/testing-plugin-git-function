@@ -705,3 +705,6 @@ function dynamic_year_shortcode() {
     return date('Y');
 }
 add_shortcode('year', 'dynamic_year_shortcode');
+
+$vari="something-need-to-commit";
+
