@@ -707,4 +707,5 @@ function dynamic_year_shortcode() {
 add_shortcode('year', 'dynamic_year_shortcode');
 
 $vari="something-need-to-commit";
+$var2="checking-git-functionality";
 

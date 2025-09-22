@@ -1,0 +1,459 @@
+/*
+Theme Name: Checkmate
+Theme URI: 
+Author: 
+Author URI: 
+Description: 
+Requires at least: 6.7
+Tested up to: 6.7
+Requires PHP: 7.2
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: checkmate
+Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+
+/*
+ * Link styles
+ * https://github.com/WordPress/gutenberg/issues/42319
+ */
+
+/*
+ * Link styles
+ * https://github.com/WordPress/gutenberg/issues/42319
+ */
+a {
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 0.1em;
+}
+
+/* Focus styles */
+/* :where(.wp-site-blocks *:focus) {
+	outline-width: 2px;
+	outline-style: solid;
+} */
+
+/* Increase the bottom margin on submenus, so that the outline is visible. */
+.wp-block-navigation
+  .wp-block-navigation-submenu
+  .wp-block-navigation-item:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+/* Increase the outline offset on the parent menu items, so that the outline does not touch the text. */
+.wp-block-navigation
+  .wp-block-navigation-item
+  .wp-block-navigation-item__content {
+  outline-offset: 4px;
+}
+
+/* Remove outline offset from the submenus, otherwise the outline is visible outside the submenu container. */
+.wp-block-navigation
+  .wp-block-navigation-item
+  ul.wp-block-navigation__submenu-container
+  .wp-block-navigation-item__content {
+  outline-offset: 0;
+}
+
+/*
+ * Progressive enhancement to reduce widows and orphans
+ * https://github.com/WordPress/gutenberg/issues/55190
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote,
+caption,
+figcaption,
+p {
+  text-wrap: pretty;
+}
+
+/*
+ * Change the position of the more block on the front, by making it a block level element.
+ * https://github.com/WordPress/gutenberg/issues/65934
+*/
+@media(min-width:750px){
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+}
+
+.more-link {
+  display: block;
+}
+/* styles start from here */
+h4,
+h5,
+h6 {
+  font-family: "BaronNeue" !important;
+  font-weight: 400;
+  line-height: 40px;
+}
+h1,
+h2,
+h3 {
+  font-family: "BebasNeue-Regular" !important;
+}
+h2 {
+  font-size: 50px !important;
+}
+h3 {
+  font-size: 28px !important;
+}
+h4 {
+  font-size: 24px !important;
+}
+h5 {
+  font-size: 22px !important;
+}
+h6 {
+  font-size: 20px !important;
+}
+
+p {
+  font-family: "Poppins-Light" !important;
+  font-size: 18px !important;
+  line-height: 40px !important;
+}
+body .dropdown-likely-section-p {
+  line-height: 30px !important;
+}
+body .dropdown-likely-section-h {
+  font-size: 1.1em !important;
+}
+body .dropdown-likely-section-col {
+  border: 1px solid #1b5faa;
+  outline: none;
+}
+.cav {
+  font-family: "BebasNeue-Regular" !important;
+}
+.block-cs {
+  display: block;
+}
+.hero-section-h-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-section-h-center h1 {
+  font-size: 110px !important;
+}
+
+.home strong {
+  font-size: 26px;
+}
+textarea {
+  resize: none !important;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.text-middle-para {
+  font-weight: bold !important;
+  font-size: 20px !important;
+}
+
+@media (min-width: 750px) {
+  .dis-block-para {
+    display: block !important;
+  }
+
+  .Program-card {
+    transition: all 0.3s ease;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  .Program-card:hover {
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.4), 0 0 20px rgba(255, 153, 0, 0.3),
+      0 0 30px rgba(255, 85, 0, 0.2), 0 0 40px rgba(60, 30, 10, 0.2);
+    transform: translateY(-6px);
+  }
+}
+@media (min-width: 1024px) {
+  .pos-abs-abt-heading {
+    position: absolute;
+    top: 17%;
+    left: 46%;
+    font-size: 60px !important;
+    z-index: 1;
+  }
+}
+.Header-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins-Light", Arial, sans-serif;
+}
+.pos-relative {
+  position: relative;
+}
+.pos-abs-abt-ball {
+  position: absolute;
+  left: -1%;
+  /* 	left: clamp(-5%, -3vw, -1%); */
+  top: 15%;
+  z-index: 1;
+}
+
+.Our-program-head::before {
+  content: "";
+  display: inline-block;
+  background-image: url("assets/images/basketball-animation.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.block-hide {
+  display: none;
+}
+
+.Try-out-form .wpforms-field-container {
+  border: 1px solid #ffffff !important;
+  background-color: #ffffff !important;
+  padding: 10px !important;
+}
+body .copy-rigth-text {
+  font-size: 14px !important;
+  text-align: right !important;
+}
+.wp-block-template-part {
+  margin: 0 !important;
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 100px !important; /* adjust as needed */
+  }
+  .mob-padding-top {
+    padding-top: 30% !important;
+  }
+  body .copy-rigth-text {
+    font-size: 12px !important;
+    text-align: left !important;
+    line-height: 15px !important;
+  }
+  .footer-logo-img img {
+    width: 170px !important;
+  }
+  body .footer-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .hero-section-h-center {
+    min-height: 60vh !important;
+  }
+  .hero-section-h-center h1 {
+    font-size: 36px !important;
+  }
+  h1 {
+    font-size: 36px !important;
+  }
+  h2 {
+    font-size: 26px !important;
+  }
+  .pos-abs-abt-ball {
+    position: absolute;
+    left: -7%;
+    top: 10%;
+    z-index: 1;
+  }
+  .pos-abs-abt-ball img {
+    height: 64px !important;
+    width: 64px !important;
+  }
+  .boy-standing-basketball img {
+    height: 520px !important;
+  }
+
+  .Cost-para {
+    margin-top: 0 !important;
+  }
+}
+
+.hero-section-h-center {
+  position: relative;
+  overflow: hidden;
+}
+.boy-standing-basketball img {
+  position: relative !important;
+  /* 	z-index:-99 !important; */
+}
+
+.hero-section-h-center::before,
+.boy-standing-basketball img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero-section-h-center > * {
+  position: relative;
+  z-index: 1;
+}
+.cav {
+  font-family: "BebasNeue-Regular" !important;
+}
+.Cost-para {
+  line-height: 25px !important;
+  margin-top: 0;
+}
+.Cost-head {
+  font-weight: bold !important;
+  font-size: 16px !important;
+  margin-top: 3px;
+}
+.Cost-p {
+  font-size: 16px !important;
+}
+.Program-card {
+  border: 2px solid #1b5faa;
+}
+
+.Register-btn a {
+  text-decoration: none !important;
+}
+.Con-fields input {
+  max-width: 100% !important;
+}
+.Con-form form {
+  border: 1px solid #1b5faa !important;
+  padding: 20px !important;
+  box-shadow: 0 6px 20px rgba(29, 78, 216, 0.3) !important;
+  border-radius: 10px !important;
+  background-color: #fff !important;
+}
+
+.Register-btn,
+.Con-sub {
+  grid-column-gap: 8px;
+  grid-row-gap: 8px;
+  transform-style: preserve-3d;
+  background-color: #1b5faa;
+  background-image: url("assets/images/basketball-animation.png"),
+    linear-gradient(101.12deg, #2563eb, #1b5faa 48%, #1e3a8a) !important;
+
+  background-repeat: no-repeat, repeat !important;
+  background-position: left center, 0 0 !important;
+  background-size: 0 100%, auto !important;
+  border-radius: 128px !important;
+  flex: 0 auto !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 1rem 1.5rem !important;
+  font-family: Gothamrounded, sans-serif;
+  font-size: 16px !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.25s ease, transform 0.35s ease,
+    background-position 0.35s ease, background-size 0.35s ease;
+  display: flex;
+  box-shadow: inset 0 0 13px 2px #a72d0066;
+  overflow: hidden;
+  width: 25%;
+  color: #ffffff !important;
+  padding: 10px !important;
+}
+
+.Register-btn:hover,
+.Con-sub:hover {
+  background-color: transparent !important;
+  background-position: right center, 0 0 !important;
+  background-size: auto 100%, auto !important;
+  cursor: pointer !important;
+}
+.Con-sub {
+  color: #ffffff !important;
+  width: 25% !important;
+}
+.wpforms-datepicker-clear {
+  margin-right: -40% !important;
+}
+@media (max-width: 1024px) {
+  .nav-pad-col ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .About-para {
+    text-align: left !important;
+  }
+  .Cost-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .donation-gateway-container {
+    display: inline-block !important;
+    width: 95% !important;
+  }
+  .Site_content {
+    min-height: 30vh !important;
+  }
+  .our-program div {
+    padding-top: 3% !important;
+  }
+}
+@media (min-width: 481px) AND (max-width: 681px) {
+  .pos-abs-abt-ball {
+    left: -4% !important;
+  }
+}
+@media (min-width: 681px) AND (max-width: 768px) {
+  .pos-abs-abt-ball {
+    left: 12% !important;
+  }
+}
+@media (min-width: 992px) AND (max-width: 1024px) {
+  .pos-abs-abt-ball {
+    left: -4% !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body
+    div.wpforms-container
+    .wpforms-form
+    #wpforms-201-field_62-container
+    .wpforms-field-layout-columns {
+    flex-direction: row !important;
+  }
+  body .Try-out-form .wpforms-field-container {
+    padding: 0 !important;
+  }
+  body .Try-out-form {
+    padding-left: 10px !important;
+    padding-right: 1px !important;
+  }
+  body #wpforms-201-field_36 {
+    max-width: 97.5% !important;
+  }
+}
+
+
+.git-color-change{
+color:#000;
+}
