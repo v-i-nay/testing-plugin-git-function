@@ -706,14 +706,3 @@ function dynamic_year_shortcode() {
 }
 add_shortcode('year', 'dynamic_year_shortcode');
 
-$vari="something-need-to-commit";
-$var2="checking-git-functionality";
-$var3="Testing final";
-$var3="Testing Afternoon";
-
-$var4="Different branch";
-
-$var5="new changes in code";
-
-$var8="checking in the branch code";
-
