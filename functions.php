@@ -706,3 +706,4 @@ function dynamic_year_shortcode() {
 }
 add_shortcode('year', 'dynamic_year_shortcode');
 
+$vari="what if base branch and commit branch is different";
